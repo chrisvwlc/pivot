@@ -111,6 +111,7 @@ nav ul {
 }
 
 /* Typography */
+
 :is(h1, h2, h3, h4, h5, h6) {
 	margin-bottom: 1.38rem;
 	font-weight: 400;
@@ -124,13 +125,40 @@ nav ul {
 :is(h2, h3):not(:first-child) {
 	margin-top: 3rem;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap');
 h1 {
 	font-size: clamp(2.488rem, 1.924rem + 1.41vw, 3.052rem);
+	/* font-variation-settings: "wdth" 600, "wght" 600, "opsz" 98; */
+	
 }
+
+@supports (font-variation-settings: normal) {
+	
+	h1 {
+		font-family: 'Recursive', sans-serif;
+		/* font-variation-settings: MONO 0, CASL 0, wght 700, slnt 0, CRSV 0; */
+		font-variation-settings: "wght" 100;
+	}
+
+	/* @font-face {
+	  font-family: 'Roboto';
+	  src: url('../../public/fonts/Roboto/') format('woff2 supports variations'),
+		   url('RobotoFlex-VF.woff2') format('woff2-variations');
+	  font-weight: 100 1000;
+	  font-stretch: 25% 151%;
+	}
+  
+	.super-bold {
+	  font-weight: 1000;
+	} */
+
+  }
+
+
 
 h2 {
 	font-size: clamp(2.074rem, 1.707rem + 0.9175vw, 2.441rem);
+	
 }
 
 h3 {
